@@ -1,6 +1,6 @@
-INSERT INTO Joueur VALUES (DEFAULT,'Lenulos93220','aaa');
-INSERT INTO Joueur VALUES (DEFAULT,'LaBouse93130','zzz');
-INSERT INTO Joueur VALUES (DEFAULT,'LeBG95470','bbb');
+INSERT INTO Joueur VALUES (DEFAULT,'Lenulos93220','aa@93220.fr','aaa');
+INSERT INTO Joueur VALUES (DEFAULT,'LaBouse93130','oo@93130.fr','zzz');
+INSERT INTO Joueur VALUES (DEFAULT,'LeBG95470','bb@95470.fr','bbb');
 
 
 INSERT INTO Ennemis VALUES (DEFAULT,'.sh',10,10,2,'Ennemi de base, dégâts simple');

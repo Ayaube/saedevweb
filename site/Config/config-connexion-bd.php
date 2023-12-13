@@ -2,9 +2,9 @@
 
 // config-connexion-bd.php
 $dbConfig = [
-    'servername' => 'localhost',
-    'username' => 'ayoub',
-    'password' => 'Ayoubsae2023',
-    'dbname' => 'saebd'
+    'servername' => 'mysql:host=database-etudiants.iut.univ-paris8.fr',
+    'username' => 'dutinfopw201676',
+    'password' => 'hutunyzu',
+    'dbname' => 'dutinfopw201676'
 ];
 ?>
