@@ -78,6 +78,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+./site/Config/config-connexion-bd.php
+
 # Editor-based Rest Client
 .idea/httpRequests
 
