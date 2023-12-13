@@ -25,7 +25,7 @@ CREATE TABLE Ennemis(
 CREATE TABLE Map(
                     id_map          INT AUTO_INCREMENT PRIMARY KEY,
                     nom_map         VARCHAR(255) NOT NULL,
-                    matrix          TEXT NOT NULL,
+                    matrix          TEXT,
                     id_proprietaire INT NOT NULL,
                     FOREIGN KEY (id_proprietaire) REFERENCES Joueur(id_joueur)
 );
