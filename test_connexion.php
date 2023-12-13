@@ -1,18 +1,15 @@
 <?php
-// Paramètres de connexion à la base de données
-$servername = "ayoublsae.mysql.db"; // ou l'adresse IP si le nom d'hôte ne fonctionne pas
-$username = "ayoublsae"; // Remplacez par votre nom d'utilisateur
-$password = "Saedevweb2023"; // Remplacez par votre mot de passe
-$dbname = "ayoublsae"; // Remplacez par le nom de votre base de données
+// Chemin vers la base de données SQLite
+$dbPath = 'bdsae.sqlite';
 
 // Créer une connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new SQLite3($dbPath);
 
 // Vérifier la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
+if (!$conn) {
+    die("La connexion a échoué : " . $conn->lastErrorMsg());
 } else {
-    echo "Connecté avec succès à la base de données";
+    echo "Connecté avec succès à la base de données SQLite";
 }
 
 // Fermer la connexion
