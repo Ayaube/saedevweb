@@ -1,9 +1,10 @@
 -- Table: Joueur
 CREATE TABLE Joueur(
                        id_joueur     INTEGER PRIMARY KEY AUTOINCREMENT,
+                        username TEXT NOT NULL ,
                        email         TEXT NOT NULL,
                        passw_hash    TEXT NOT NULL,
-                       date_creation TEXT NOT NULL
+                       date_creation TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Table: Ennemis
@@ -51,7 +52,6 @@ CREATE TABLE Partie(
                        vague_atteinte INTEGER NOT NULL,
                        ennemis_tue INTEGER NOT NULL,
                        argent_gagne INTEGER NOT NULL,
-                       est_fini BOOLEAN NOT NULL,
                        id_joueur_Joue INTEGER NOT NULL,
                        id_map INTEGER NOT NULL,
                        FOREIGN KEY (id_joueur_Joue) REFERENCES Joueur(id_joueur),
