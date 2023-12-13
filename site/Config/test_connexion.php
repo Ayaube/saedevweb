@@ -1,5 +1,6 @@
 <?php
 // Inclure le fichier de configuration
+global $dbConfig;
 require 'config-connexion-bd.php';
 
 
