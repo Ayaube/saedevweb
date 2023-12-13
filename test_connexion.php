@@ -1,6 +1,6 @@
 <?php
 // Chemin vers la base de données SQLite
-$dbPath = 'bdsae.sqllite';
+$dbPath = 'bdsae.sqlite';
 
 // Créer une connexion
 $conn = new SQLite3($dbPath);
