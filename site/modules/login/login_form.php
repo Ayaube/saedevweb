@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Connexion</h2>
+    <b>Si vous n'etes pas inscrit, vous pouvez vous inscrire en cliquant sur le bouton <a href="../register/register_form.php">S'inscrire</a></b> 
     <form action="index.php" method="post">
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" id="username" name="username" required>

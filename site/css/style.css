@@ -3,8 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    background-color: violet;
 }
 
 .list{
     display: flex;
+    background-color: blue;
+}
+
+.footer {
+    background-color: crimson;
 }
