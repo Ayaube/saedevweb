@@ -27,7 +27,7 @@
             <?php
             $bool = true;
             if ($bool) {
-                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="mes-parties.php">Mes Parties</a></li></ul>';
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="mes-parties.php">Mes Parties</a></li></ul>';
             }
             ?>
 
