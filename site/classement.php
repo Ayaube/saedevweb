@@ -11,7 +11,9 @@
 
 <?php include_once "./header.php"; ?>
 
-<!-- Contenu à faire les mecs-->
+<div class="content-wrapper">
+    <!-- Tout votre contenu ici -->
+</div>
 
 <?php include_once "./footer.php"; ?>
 

@@ -13,7 +13,10 @@
 include_once "header.php";
 ?>
 
-<!-- Contenu de la page ici -->
+
+<div class="content-wrapper">
+    <!-- Tout votre contenu ici -->
+</div>
 
 <?php
 include_once "footer.php";
