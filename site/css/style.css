@@ -8,3 +8,21 @@
 .list{
     display: flex;
 }
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
+    background-color: #162739 !important;
+}
+
+
+.navbar-custom .nav-link {
+    color: #BFCBCB;
+}
+
+.btn-custom {
+    color: #AC8651;
+    border-color: #AC8651;
+}
+.btn-custom:hover {
+    color: #BFCBCB;
+}
+
