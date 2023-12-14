@@ -18,6 +18,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
     color: #BFCBCB;
 }
 
+.navbar-custom .navbar-toggler {
+    background-color: #D1EBF2;
+}
+
 .btn-custom {
     color: #AC8651;
     border-color: #AC8651;
