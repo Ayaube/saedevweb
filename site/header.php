@@ -35,7 +35,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="btn btn-custom" href="connexion.php">Connexion</a>
-
                 </li>
             </ul>
         </div>
