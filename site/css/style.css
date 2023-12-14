@@ -26,6 +26,12 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
     background-color: #D1EBF2;
 }
 
+.navbar-custom {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+
 .btn-custom {
     color: #AC8651;
     border-color: #AC8651;
