@@ -30,6 +30,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
     color: #BFCBCB;
 }
 
+.navbar-custom .nav-link:hover {
+    color: #AC8651;
+}
+
 body {
     background-color: #D1EBF2;
 }
