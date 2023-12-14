@@ -15,9 +15,7 @@ CREATE TABLE Ennemis(
                         pv              INT NOT NULL,
                         vitesse         INT NOT NULL,
                         gain            INT NOT NULL,
-                        desc            TEXT NOT NULL,
-                        id_proprietaire INT NOT NULL,
-                        FOREIGN KEY (id_proprietaire) REFERENCES Joueur(id_joueur)
+                        description            TEXT NOT NULL
 );
 
 
@@ -25,9 +23,7 @@ CREATE TABLE Ennemis(
 CREATE TABLE Map(
                     id_map          INT AUTO_INCREMENT PRIMARY KEY,
                     nom_map         VARCHAR(255) NOT NULL,
-                    matrix          TEXT,
-                    id_proprietaire INT NOT NULL,
-                    FOREIGN KEY (id_proprietaire) REFERENCES Joueur(id_joueur)
+                    matrix          TEXT
 );
 
 
@@ -37,8 +33,7 @@ CREATE TABLE Tourelle(
                         nom_tourelle    VARCHAR(255) NOT NULL,
                         date_creation   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                         prix_ram        INT NOT NULL,
-                        prix_flops      INT NOT NULL,
-                        FOREIGN KEY (id_proprietaire) REFERENCES Joueur(id_joueur)
+                        prix_flops      INT NOT NULL
 );
 
 

@@ -13,6 +13,6 @@
                 echo '<ul><a href="#">Mes Parties</a></ul>';
             }
         ?>
-        <ul><a href="#">Connexion</a></ul>
+        <ul><a href="?module=login">Connexion</a></ul>
     </li>
 </div>
