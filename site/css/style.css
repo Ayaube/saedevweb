@@ -8,3 +8,113 @@
 .list{
     display: flex;
 }
+
+
+.espace-haut {
+    height: 100px;
+}
+
+
+.espace-bas {
+    height: 130px;
+}
+
+
+.content-block {
+    background-color: #162739;
+    color: #BFCBCB;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 10px auto;
+    max-width: 1600px;
+    min-width: 1000px;
+}
+
+.content-block h2 {
+    color: #BFCBCB;
+}
+
+.content-block p {
+    color: #BFCBCB;
+}
+
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
+    background-color: #162739 !important;
+}
+
+.navbar-nav .mes-parties-link {
+    margin-right: 13px;
+}
+
+
+.navbar-custom .nav-link {
+    color: #BFCBCB;
+}
+
+.navbar-custom .navbar-toggler {
+    background-color: #D1EBF2;
+}
+
+.navbar-custom {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+
+.btn-custom {
+    color: #AC8651;
+    border-color: #AC8651;
+}
+.btn-custom:hover {
+    color: #BFCBCB;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #AC8651;
+}
+
+.navbar-custom .nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -1px;
+    left: 50%;
+    background-color: #AC8651;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #D1EBF2;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer {
+    background-color: #AC8651;
+    flex-shrink: 0;
+}
+
