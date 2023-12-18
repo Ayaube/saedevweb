@@ -30,8 +30,8 @@ if (isset($_GET['module'])) {
 
         case 'login':
             include_once "modules/login/cont_login.php";
-            $controller = new LoginController();
-            $controller->handle();
+            $controller = new ControleurLogin();
+            $controller->__construct();
             break;
 
         case 'mes-parties':
