@@ -47,6 +47,18 @@ if (isset($_GET['module'])) {
             $controller->handle();
             break;
 
+        case 'a-propos':
+            include_once "./modules/a-propos/cont-a-propos.php";
+            $controller = new AProposController();
+            $controller->handle();
+            break;
+
+        case 'notre-jeu':
+            include_once "./modules/notre-jeu/cont-notre-jeu.php";
+            $controller = new NotreJeuController();
+            $controller->handle();
+            break;
+
 
         default:
             echo "Aucun module détecté";
