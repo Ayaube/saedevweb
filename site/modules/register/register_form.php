@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Inscription</h2>
-    <form action="index.php" method="post">
+    <form action="index.php?module=register&action=try_register" method="post">
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" id="username" name="username" required>
         <br>
