@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-</head>
-<body>
     <h2>Connexion</h2>
     <form action="index.php" method="post">
         <label for="username">Nom d'utilisateur :</label>
@@ -16,6 +8,4 @@
         <br>
         <input type="submit" value="Se connecter">
     </form>
-    <a href="index?module=register"></a>
-</body>
-</html>
+    <a href="?module=register">Pas de compte ?</a>
