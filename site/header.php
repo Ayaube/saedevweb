@@ -5,39 +5,37 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <!-- Éléments de la navbar -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
                 </li>
+                <!-- Utiliser des paramètres GET pour naviguer dans les modules -->
                 <li class="nav-item">
-                    <a class="nav-link" href="notre-jeu.php">Notre Jeu</a>
+                    <a class="nav-link" href="index.php?module=notre-jeu">Notre Jeu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="classement.php">Classement</a>
+                    <a class="nav-link" href="index.php?module=classement">Classement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-propos.php">A Propos</a>
+                    <a class="nav-link" href="index.php?module=a-propos">A Propos</a>
                 </li>
             </ul>
-
 
             <?php
             $bool = true;
             if ($bool) {
-                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="mes-parties.php">Mes Parties</a></li></ul>';
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="index.php?module=mes-parties">Mes Parties</a></li></ul>';
             }
             ?>
 
             <!-- Bouton de connexion -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-custom" href="/site/?module=login">Connexion</a>
+                    <a class="btn btn-custom" href="index.php?module=login">Connexion</a>
                 </li>
             </ul>
         </div>
     </div>
-
 </nav>
