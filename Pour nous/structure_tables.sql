@@ -15,7 +15,7 @@ CREATE TABLE Ennemis(
                         pv              INT NOT NULL,
                         vitesse         INT NOT NULL,
                         gain            INT NOT NULL,
-                        description            TEXT NOT NULL
+                        description     TEXT NOT NULL
 );
 
 
@@ -23,7 +23,7 @@ CREATE TABLE Ennemis(
 CREATE TABLE Map(
                     id_map          INT AUTO_INCREMENT PRIMARY KEY,
                     nom_map         VARCHAR(255) NOT NULL,
-                    matrix          TEXT
+                    matrix          VARCHAR(255) NOT NULL
 );
 
 
