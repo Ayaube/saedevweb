@@ -31,19 +31,16 @@ if (isset($_GET['module'])) {
 
     switch ($module) {
         case 'register':
-            include_once "modules/register/cont_register.php";
-            $controller = new RegisterController();
-            $controller->handle();
+            include_once "modules/register/module_register.php";
+            $moduleRegister = new ModRegister();
             break;
 
         case 'login':
-            include_once "modules/login/cont_login.php";
-            $controller = new ControleurLogin();
-            $controller->__construct();
+            include_once "modules/login/module_login.php";
+            $moduleLogin = new ModLogin();
             break;
 
         case 'mes-parties':
-
             include_once "./modules/mes-parties/cont-mes-parties.php";
             $controller = new MesPartiesController();
             $controller->handle();
@@ -81,5 +78,6 @@ include_once "footer.php";
 ?>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./script/register_form.js"></script>
 </body>
 </html>

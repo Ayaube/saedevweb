@@ -7,11 +7,10 @@
         
         public function __construct() {
             
-            $this->controleurRegister = new ControleurLogin();
-            echo "ACTION : ".$this->controleurRegister->action;
-            switch ($this->controleurRegister->action) {
+            $this->controleurLogin = new ControleurLogin();
+            switch ($this->controleurLogin->action) {
                 case 'login':
-                    $this->controleurRegister->vue->showLoginForm();
+                    $this->controleurLogin->vue->showLoginForm();
                     break;
                 
                 default:

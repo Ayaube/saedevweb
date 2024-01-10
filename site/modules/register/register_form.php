@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-</head>
-<body>
+
     <h2>Inscription</h2>
     <form action="index.php?module=register&action=try_register" method="post">
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" id="username" name="username" required>
         <br>
         <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="register-email" name="email" required>
         <br>
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required>
         <br>
-        <input type="submit" value="S'inscrire">
+        <label for="confirm_password">Mot de passe :</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <br>
+        <input type="submit" value="S'inscrire" id="register-submit">
     </form>
-</body>
-</html>
