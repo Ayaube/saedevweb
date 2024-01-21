@@ -6,8 +6,6 @@
     <title>Tower Defense</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="images/tower.png" type="image/x-icon">
-    <link rel="shortcut icon" href="images/tower.png" type="image/x-icon">
 </head>
 <body>
 <?php
@@ -61,33 +59,9 @@ if (isset($_GET['module'])) {
             $controller->handle();
             break;
 
-        case 'ennemis':
-            include_once "./modules/notre-jeu/ennemis/cont-ennemis.php";
-            $controller = new EnnemisController();
-            $controller->handle();
-            break;
-
-        case 'cartes':
-            include_once "./modules/notre-jeu/cartes/cont-cartes.php";
-            $controller = new CartesController();
-            $controller->handle();
-            break;
-
-        case 'tours':
-            include_once "./modules/notre-jeu/tours/cont-tours.php";
-            $controller = new ToursController();
-            $controller->handle();
-            break;
-
-        case 'equipe':
-            include_once "./modules/a-propos/equipe/cont-equipe.php";
-            $controller = new EquipeController();
-            $controller->handle();
-            break;
-
 
         default:
-            echo "Module demandé : " . htmlspecialchars($_GET['module']);
+            echo "Aucun module détecté";
             break;
     }
 } else {
