@@ -24,7 +24,7 @@ if (isset($_GET['module'])) {
     switch ($module) {
         case 'register':
             include_once "modules/register/cont_register.php";
-            $controller = new RegisterController();
+            $controller = new ControleurRegister();
             $controller->handle();
             break;
 

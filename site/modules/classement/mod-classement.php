@@ -1,9 +1,18 @@
 <?php
 
 // modules/classement/ClassementModel.php
-class ClassementModel {
+require_once './modules/connexionBD/connxionBD.php';
+class ClassementModel extends Connexion {
+    
     public function getData() {
-        // Logique pour récupérer les données de classement
+        try{
+            $stmt = self::$bdd->prepare('SELECT username,map,vague_atteinte,ennemis_tue,argent_gagne FROM Partie NATURAL JOIN Joueur ORDER BY argent_gagne DESC');
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e) {
+            die('Erreur lors de la recuperation du classement : ' . $e->getMessage());
+        }
     }
 }
 
