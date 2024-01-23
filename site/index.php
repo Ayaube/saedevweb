@@ -59,6 +59,12 @@ if (isset($_GET['module'])) {
             $controller->handle();
             break;
 
+        case 'cartes':
+            include_once "./modules/notre-jeu/cartes/cont-map.php";
+            $controller = new ContMap();
+            $controller->view();
+            break;
+
 
         default:
             echo "Aucun module détecté";

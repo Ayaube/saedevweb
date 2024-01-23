@@ -20,6 +20,42 @@
     height: 130px;
 }
 
+/* Partie concernant l'affichage des map, Ayoub*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carte-btn {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.carte-btn:hover {
+    background-color: #AC8651;
+}
+
+#map-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%; /* ou une autre largeur selon votre préférence */
+    height: auto;
+    margin-bottom: 100px;
+}
+
 
 
 .content-block {
