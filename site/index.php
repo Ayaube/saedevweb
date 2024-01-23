@@ -25,7 +25,7 @@ error_reporting(E_ALL);
 
 include_once "header.php";
 
-
+/*Commentaire*/
 if (isset($_GET['module'])) {
     $module = $_GET['module'];
 
