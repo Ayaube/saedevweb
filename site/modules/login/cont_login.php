@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
     include_once "vue_login.php";
     include_once "modele_login.php";
 

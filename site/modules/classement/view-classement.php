@@ -1,6 +1,8 @@
 <?php
 
-// modules/classement/ClassementView.php
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 class ClassementView {
     public function render($data) {
         $i = 1;

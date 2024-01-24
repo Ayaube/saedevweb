@@ -1,5 +1,7 @@
 <?php
-
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 class ToursView {
     private $descriptions;
     private $imageCount;

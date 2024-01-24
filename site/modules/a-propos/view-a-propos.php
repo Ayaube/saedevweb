@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
+
 class AProposView {
     public function render() {
         include_once "header.php";

@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
     include_once "cont_login.php";
 
     class ModLogin

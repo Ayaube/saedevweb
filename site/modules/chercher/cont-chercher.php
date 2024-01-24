@@ -1,9 +1,11 @@
 <?php
 
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 
-// Votre fichier ChercherController actuel
 
-include_once "./modules/chercher/mod-chercher.php"; // Ajouter le modèle de recherche
+include_once "./modules/chercher/mod-chercher.php";
 include_once "./modules/chercher/view-chercher.php";
 
 class ChercherController {

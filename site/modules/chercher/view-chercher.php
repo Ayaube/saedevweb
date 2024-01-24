@@ -1,4 +1,9 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
+
 class ChercherView {
     public function render($data = null) {
         include_once "header.php";

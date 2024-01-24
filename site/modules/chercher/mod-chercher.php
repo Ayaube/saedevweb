@@ -1,6 +1,8 @@
 <?php
 
-// modules/chercher/ChercherModel.php
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 require_once './modules/connexionBD/connxionBD.php';
 
 class ChercherModel extends Connexion {

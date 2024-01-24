@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
     class VueLogin{
         public function __construct() {
 
