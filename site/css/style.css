@@ -1,3 +1,47 @@
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.search-bar input[type="text"] {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+    display: block; /* Afficher l'élément input comme un bloc (sur une ligne différente) */
+}
+
+.search-bar button {
+    height: 50px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-left: 12px;
+    background-color: #162739; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block; /* Afficher l'élément button comme un bloc (sur une ligne différente) */
+}
+
+.search-bar button:hover {
+    background-color: #AC8651; /* Couleur au survol du bouton */
+}
+
+.no-results-message {
+    color: #AC8651;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
 .table {
     margin-top: 50px;
     width: 80%;
@@ -214,6 +258,8 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
@@ -333,8 +379,9 @@ main {
 
 
 
-.footer {
+.footer{
     background-color: #AC8651;
     flex-shrink: 0;
 }
+
 

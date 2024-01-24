@@ -19,8 +19,12 @@
                     <a class="nav-link" href="index.php?module=classement">Classement</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=chercher">Chercher</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="index.php?module=a-propos">A Propos</a>
                 </li>
+
             </ul>
 
             <?php

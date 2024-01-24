@@ -80,6 +80,12 @@ if (isset($_GET['module'])) {
             $controller->handle();
             break;
 
+        case 'chercher':
+            include_once "./modules/chercher/cont-chercher.php";
+            $controller = new ChercherController();
+            $controller->handle();
+            break;
+
 
         default:
             echo "Aucun module détecté";
