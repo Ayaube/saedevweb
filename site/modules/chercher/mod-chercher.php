@@ -13,7 +13,7 @@ class ChercherModel extends Connexion {
                 ORDER BY Partie.argent_gagne DESC');
             $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
             $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         catch (PDOException $e) {
             die('Erreur lors de la recherche du joueur : ' . $e->getMessage());
