@@ -21,13 +21,15 @@
 }
 
 .table th {
-    background-color: #162739;
+    background-color: #BFCBCB;
     color: black;
 }
 
 .table-success {
-    background-color: #AC8651;
+    background-color: #AC8651 !important;
+    color: white !important;
 }
+
 
 
 .header{
