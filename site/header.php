@@ -11,7 +11,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
                 </li>
-                <!-- Utiliser des paramètres GET pour naviguer dans les modules -->
+
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?module=notre-jeu">Notre Jeu</a>
                 </li>
