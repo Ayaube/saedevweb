@@ -6,6 +6,9 @@
     <title>Tower Defense</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/tower.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/tower.png" type="image/x-icon">
+
 </head>
 <body>
     <?php
@@ -31,8 +34,9 @@ if (isset($_GET['module'])) {
 
     switch ($module) {
         case 'register':
-            include_once "modules/register/module_register.php";
-            $moduleRegister = new ModRegister();
+            include_once "modules/register/cont_register.php";
+            $controller = new ControleurRegister();
+            $controller->handle();
             break;
 
         case 'login':
@@ -61,6 +65,24 @@ if (isset($_GET['module'])) {
         case 'notre-jeu':
             include_once "./modules/notre-jeu/cont-notre-jeu.php";
             $controller = new NotreJeuController();
+            $controller->handle();
+            break;
+
+        case 'cartes':
+            include_once "./modules/notre-jeu/cartes/cont-map.php";
+            $controller = new ContMap();
+            $controller->view();
+            break;
+
+        case 'ennemis':
+            include_once "./modules/notre-jeu/ennemis/cont-ennemis.php";
+            $controller = new EnnemisController();
+            $controller->handle();
+            break;
+
+        case 'tours':
+            include_once "./modules/notre-jeu/tours/cont-tours.php";
+            $controller = new ToursController();
             $controller->handle();
             break;
 

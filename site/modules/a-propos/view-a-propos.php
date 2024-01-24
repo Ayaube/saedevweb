@@ -1,39 +1,40 @@
 <?php
 
-// modules/a-propos/AProposView.php
 class AProposView {
     public function render() {
-
         include_once "header.php";
         ?>
-        <div class="content-wrapper">
+
+        <div id="a-propos" class="content-wrapper">
 
 
-            <div class="espace-haut"></div>
+            <a href="index.php?module=equipe" class="column-link">
+                <div class="column" id="block1">
+                    <h2>L'équipe</h2>
+                </div>
+            </a>
 
+            <a href="index.php?module=contexte" class="column-link">
+                <div class="column" id="block2">
+                    <h2>Contexte</h2>
+                </div>
+            </a>
 
-            <div class="content-block" id="block1">
-                <h2>Ayoub Lamchichi</h2>
-                <p>Texte du Bloc 1...</p>
-            </div>
-
-            <div class="content-block" id="block2">
-                <h2>Lucas Liger</h2>
-                <p>Texte du Bloc 2...</p>
-            </div>
-
-            <div class="content-block" id="block3">
-                <h2>Horeb Silva</h2>
-                <p>Texte du Bloc 3...</p>
-            </div>
+            <a href="index.php?module=AutreModule" class="column-link">
+                <div class="column" id="block3">
+                    <h2>Autre Module</h2>
+                </div>
+            </a>
 
             <div class="espace-bas"></div>
 
         </div>
+
         <?php
         include_once "footer.php";
     }
 }
+
 
 
 ?>

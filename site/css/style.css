@@ -1,8 +1,43 @@
+.table {
+    margin-top: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.titre-classement {
+    text-align: center;
+    color: #162739;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #BFCBCB;
+    color: black;
+}
+
+.table-success {
+    background-color: #AC8651 !important;
+    color: white !important;
+}
+
+
+
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    
 }
 
 .list{
@@ -18,6 +53,85 @@
 .espace-bas {
     height: 130px;
 }
+
+/* Partie concernant l'affichage des map, Ayoub*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carte-btn {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.carte-btn:hover {
+    background-color: #AC8651;
+}
+
+#map-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Partie concernant l'affichage des enne, Ayoub*/
+
+#enemyContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+#currentImage {
+    width: 100px; /* Ajustez selon vos besoins */
+    height: auto;
+}
+
+#imageDescription {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #AC8651;
+}
+
+
+
 
 
 .content-block {
@@ -103,14 +217,120 @@ html, body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #D1EBF2;
 }
 
-.content-wrapper {
+main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
 }
+
+.content-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#a-propos.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+#a-propos .column-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+#a-propos .column {
+    background-color: #162739;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s ease;
+    flex-grow: 1;
+}
+
+#a-propos .column h2 {
+    color: #BFCBCB;
+    margin: 0;
+}
+
+#a-propos .column-link:hover .column {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+#a-propos .column-link:hover .column h2 {
+    color: #AC8651;
+}
+
+
+
+
+
+
+
+
+
+#notre-jeu.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+#notre-jeu .column-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+#notre-jeu .column {
+    background-color: #162739;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s ease;
+    flex-grow: 1;
+}
+
+#notre-jeu .column h2 {
+    color: #BFCBCB;
+    margin: 0;
+}
+
+#notre-jeu .column-link:hover .column {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+#notre-jeu .column-link:hover .column h2 {
+    color: #AC8651;
+}
+
 
 
 .footer {
