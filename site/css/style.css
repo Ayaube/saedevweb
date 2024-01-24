@@ -59,6 +59,46 @@ form {
 }
 
 
+/* Partie concernant l'affichage des enne, Ayoub*/
+
+#enemyContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+#currentImage {
+    width: 100px; /* Ajustez selon vos besoins */
+    height: auto;
+}
+
+#imageDescription {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #AC8651;
+}
+
+
+
+
 
 .content-block {
     background-color: #162739;
@@ -143,7 +183,13 @@ html, body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #D1EBF2;
+}
+
+main {
+    flex: 1;
 }
 
 .content-link {
