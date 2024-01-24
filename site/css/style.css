@@ -111,6 +111,10 @@ form {
     color: #333;
 }
 
+#imageTitre {
+    text-align: center;
+}
+
 button {
     margin-top: 20px;
     margin-right: 10px;

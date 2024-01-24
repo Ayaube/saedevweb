@@ -5,7 +5,7 @@ class ViewMap {
         // Formulaire avec boutons pour choisir la carte
         echo '<form action="" method="post">';
         for ($i = 1; $i <= 5; $i++) {
-            echo '<button type="submit" name="mapNumber" value="' . ($i - 1) . '" id="btn-carte-' . $i . '" class="carte-btn">Carte ' . $i . '</button>';
+            echo '<button type="submit" name="mapNumber" value="' . ($i) . '" id="btn-carte-' . $i . '" class="carte-btn">Carte ' . $i . '</button>';
         }
         echo '</form>';
 
