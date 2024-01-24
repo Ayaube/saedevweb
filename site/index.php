@@ -68,6 +68,12 @@ if (isset($_GET['module'])) {
             $controller->view();
             break;
 
+        case 'ennemis':
+            include_once "./modules/notre-jeu/ennemis/cont-ennemis.php";
+            $controller = new EnnemisController();
+            $controller->handle();
+            break;
+
 
         default:
             echo "Aucun module détecté";
