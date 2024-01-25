@@ -53,7 +53,7 @@ class InscriptionController {
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
             if ($model->registerUser($username, $email, $passwordHash)) {
                 $_SESSION['success_message'] = 'Inscription réussie. Vous pouvez maintenant vous connecter.';
-                header('Location: cont-connexion.php');
+                header('Location: index.php?module=connexion');
                 exit;
             } else {
                 $_SESSION['error_message'] = 'Une erreur est survenue lors de l\'inscription.';
