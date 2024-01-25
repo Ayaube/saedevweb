@@ -1,17 +1,22 @@
 <?php
 
 if (!defined('MY_APP')) {
-    exit('Accès non authorisé');
+    exit('Accès non autorisé');
 }
 
 class MesPartiesView {
     public function render($data) {
+        include_once "header.php";
         $i = 1;
+
         ?>
         <h1 class="titre-classement fw-bold">Mes Parties</h1>
 
+        <?php
+        if (isset($_SESSION['role'])&&$_SESSION['role'] != 'admin') {
+        ?>
         <div class="alert alert-primary" role="alert">
-            Bonjour <?php echo $_SESSION['user']?>,
+            Bonjour <?php echo $_SESSION['user'] ;?>,
             voici vos parties !
         </div>
 
@@ -38,6 +43,19 @@ class MesPartiesView {
             </tbody>
         </table>
         <?php
+        }
+        else if (isset($_SESSION['role'])&&$_SESSION['role'] == 'admin'){
+            ?>
+            <div class="alert alert-primary" role="alert">
+            Bonjour <?php echo $_SESSION['user'] ;?>,
+            voici vos fonctions d'administrateur !
+        </div>
+            <button type="button" class="btn btn-danger" onclick="window.location.href='index.php?module=delete';"">Supprimer un joueur</button>
+        <?php
+        }
+        else {
+            echo 'Role non défini ou user non connecté';
+        }
     }
 }
 

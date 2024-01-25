@@ -25,6 +25,8 @@ class ConnexionController {
 
             if ($model->checkCredentials($username, $password)) {
                 $_SESSION['user'] = $username;
+                $_SESSION['role'] = $model->getRole($username);
+
                 header('Location: index.php');
                 exit;
             } else {
