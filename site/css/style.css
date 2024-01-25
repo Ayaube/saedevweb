@@ -81,7 +81,6 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    
 }
 
 .list{
@@ -90,7 +89,7 @@
 
 
 .espace-haut {
-    height: 100px;
+    height: 500px;
 }
 
 

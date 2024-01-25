@@ -29,7 +29,6 @@
 
             <?php
 
-            session_start();
 
             if (isset($_SESSION['user'])) {
                 // Afficher "Mes Parties" et "Déconnexion" si l'utilisateur est connecté
