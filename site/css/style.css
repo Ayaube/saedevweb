@@ -419,3 +419,39 @@ main {
 }
 
 
+/* Style pour la carte de connexion */
+.card {
+    margin-bottom: 210px; /* Espace en dessous de la carte */
+    margin-top: 100px
+}
+
+/* Titre de la carte de connexion */
+.card-header h4 {
+    text-align: center; /* Centrer le titre de la carte */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    margin-top: 15px;
+}
+
+/* Style pour le bouton de connexion */
+.btn-primary {
+    width: 100%; /* Le bouton prend toute la largeur */
+    background-color: #162739; /* Couleur de fond */
+    border-color: #162739; /* Couleur de la bordure */
+}
+
+.btn-primary:hover {
+    background-color: #AC8651; /* Couleur de fond au survol */
+    border-color: #AC8651; /* Couleur de la bordure au survol */
+}
+
+/* Style pour le bouton d'inscription */
+.btn-secondary {
+    width: 100%; /* Le bouton prend toute la largeur */
+    background-color: #6c757d; /* Couleur de fond */
+    border-color: #6c757d; /* Couleur de la bordure */
+}
+
+.btn-secondary:hover {
+    background-color: #162739; /* Couleur de fond au survol */
+    border-color: #162739; /* Couleur de la bordure au survol */
+}

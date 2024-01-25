@@ -28,18 +28,18 @@
             </ul>
 
             <?php
-            $bool = true;
-            if ($bool) {
+
+            session_start();
+
+            if (isset($_SESSION['user'])) {
+                // Afficher "Mes Parties" et "Déconnexion" si l'utilisateur est connecté
                 echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="index.php?module=mes-parties">Mes Parties</a></li></ul>';
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="btn btn-custom" href="index.php?module=deconnexion">Déconnexion</a></li></ul>';
+            } else {
+                // Afficher "Connexion" si l'utilisateur n'est pas connecté
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="btn btn-custom" href="index.php?module=connexion">Connexion</a></li></ul>';
             }
             ?>
-
-            <!-- Bouton de connexion -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="btn btn-custom" href="index.php?module=connexion">Connexion</a>
-                </li>
-            </ul>
         </div>
     </div>
 </nav>

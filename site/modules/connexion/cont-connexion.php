@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 if (!defined('MY_APP')) {
     exit('Accès non autorisé');

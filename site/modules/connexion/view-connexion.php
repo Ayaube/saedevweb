@@ -30,7 +30,12 @@ class ConnexionView {
                                     <label for="password" class="form-label">Mot de passe</label>
                                     <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Se connecter</button>
+
+                                    <button type="submit" class="btn btn-primary">Se connecter</button>
+
+                                <div class="mb-3">
+                                    <a href="index.php?module=inscription" class="btn btn-secondary">S'inscrire</a>
+                                </div>
                             </form>
                         </div>
                     </div>

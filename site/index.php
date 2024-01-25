@@ -13,7 +13,10 @@
 <body>
 <?php
 
+
 define('MY_APP', true);
+
+session_start();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -39,6 +42,13 @@ if (isset($_GET['module'])) {
             $controller = new ConnexionController();
             $controller->handle();
             break;
+
+        case 'deconnexion':
+            include_once "modules/deconnexion/cont-deconnexion.php";
+            $controller = new DeconnexionController();
+            $controller->handle();
+            break;
+
 
         case 'mes-parties':
 
