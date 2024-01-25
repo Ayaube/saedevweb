@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
     Class Connexion {
         protected static $bdd;
         public function __construct() {

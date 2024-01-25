@@ -11,7 +11,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
                 </li>
-                <!-- Utiliser des paramètres GET pour naviguer dans les modules -->
+
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?module=notre-jeu">Notre Jeu</a>
                 </li>
@@ -19,23 +19,26 @@
                     <a class="nav-link" href="index.php?module=classement">Classement</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=chercher">Chercher</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="index.php?module=a-propos">A Propos</a>
                 </li>
+
             </ul>
 
             <?php
-            $bool = true;
-            if ($bool) {
+
+
+            if (isset($_SESSION['user'])) {
+                // Afficher "Mes Parties" et "Déconnexion" si l'utilisateur est connecté
                 echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="index.php?module=mes-parties">Mes Parties</a></li></ul>';
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="btn btn-custom" href="index.php?module=deconnexion">Déconnexion</a></li></ul>';
+            } else {
+                // Afficher "Connexion" si l'utilisateur n'est pas connecté
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="btn btn-custom" href="index.php?module=connexion">Connexion</a></li></ul>';
             }
             ?>
-
-            <!-- Bouton de connexion -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="btn btn-custom" href="index.php?module=login">Connexion</a>
-                </li>
-            </ul>
         </div>
     </div>
 </nav>

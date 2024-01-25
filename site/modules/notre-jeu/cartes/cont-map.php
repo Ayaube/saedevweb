@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 include_once 'vue-map.php';
 include_once 'mod-map.php';
 

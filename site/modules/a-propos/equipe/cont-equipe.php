@@ -1,5 +1,7 @@
 <?php
-
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 
 class EquipeController {
 public function handle() {

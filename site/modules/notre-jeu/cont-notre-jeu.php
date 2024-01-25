@@ -1,6 +1,8 @@
 <?php
 
-
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 class NotreJeuController {
 public function handle() {
 

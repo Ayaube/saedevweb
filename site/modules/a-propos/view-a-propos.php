@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
+
 class AProposView {
     public function render() {
         include_once "header.php";
@@ -20,9 +24,9 @@ class AProposView {
                 </div>
             </a>
 
-            <a href="index.php?module=AutreModule" class="column-link">
+            <a href="index.php?module=Telecharger" class="column-link">
                 <div class="column" id="block3">
-                    <h2>Autre Module</h2>
+                    <h2>Télécharger</h2>
                 </div>
             </a>
 

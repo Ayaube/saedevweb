@@ -12,11 +12,17 @@
 </head>
 <body>
 <?php
+
+
+define('MY_APP', true);
+
+session_start();
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Inclusion du fichier de config reseau
+
 
 include_once "header.php";
 
@@ -25,17 +31,24 @@ if (isset($_GET['module'])) {
     $module = $_GET['module'];
 
     switch ($module) {
-        case 'register':
-            include_once "modules/register/cont_register.php";
-            $controller = new ControleurRegister();
+        case 'inscription':
+            include_once "modules/inscription/cont-inscription.php";
+            $controller = new InscriptionController();
             $controller->handle();
             break;
 
-        case 'login':
-            include_once "modules/login/cont_login.php";
-            $controller = new ControleurLogin();
-            $controller->__construct();
+        case 'connexion':
+            include_once "modules/connexion/cont-connexion.php";
+            $controller = new ConnexionController();
+            $controller->handle();
             break;
+
+        case 'deconnexion':
+            include_once "modules/deconnexion/cont-deconnexion.php";
+            $controller = new DeconnexionController();
+            $controller->handle();
+            break;
+
 
         case 'mes-parties':
 
@@ -77,6 +90,12 @@ if (isset($_GET['module'])) {
         case 'tours':
             include_once "./modules/notre-jeu/tours/cont-tours.php";
             $controller = new ToursController();
+            $controller->handle();
+            break;
+
+        case 'chercher':
+            include_once "./modules/chercher/cont-chercher.php";
+            $controller = new ChercherController();
             $controller->handle();
             break;
 

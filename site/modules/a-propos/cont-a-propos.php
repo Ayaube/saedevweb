@@ -1,5 +1,8 @@
 <?php
 
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
 
 class AProposController {
 public function handle() {

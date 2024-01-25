@@ -1,5 +1,12 @@
 <?php
+
+if (!defined('MY_APP')) {
+    exit('Accès non authorisé');
+}
+
 Class ModMap {
+
+
 
     private $tileSize = 32;
 
