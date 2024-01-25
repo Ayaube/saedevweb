@@ -29,7 +29,7 @@ class EnnemisView {
             <div id="imageDescription"><?php echo $this->descriptions['0.png']; ?></div>
             <div id="pv" class="fw-bold"> PV : <?php echo $this->pv['0.png']; ?></div>
             <div id="vitesse" class="fw-bold">Vitesse : <?php echo $this->vitesse['0.png']; ?></div>
-            <div id="gain" class="fw-bold">Pieces gagnés après l'avoir eliminé : <?php echo $this->gain['0.png']; ?></div>
+            <div id="gain" class="fw-bold">Pieces gagnées après l'avoir eliminé : <?php echo $this->gain['0.png']; ?></div>
 
         </div>
 
@@ -52,7 +52,7 @@ class EnnemisView {
                 document.getElementById("enemyName").innerHTML = noms[imageName];
                 document.getElementById("pv").innerHTML = 'PV : ' + pv[imageName];
                 document.getElementById("vitesse").innerHTML = 'Vitesse : ' + vitesse[imageName];
-                document.getElementById("gain").innerHTML = "Pieces gagnés après l'avoir eliminé :  " + gain[imageName];
+                document.getElementById("gain").innerHTML = "Pieces gagnées après l'avoir eliminé :  " + gain[imageName];
 
             }
 
