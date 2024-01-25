@@ -3,17 +3,19 @@
 if (!defined('MY_APP')) {
     exit('Accès non authorisé');
 }
+require_once './modules/connexionBD/connxionBD.php';
 
-Class ModMap {
-
-
+Class ModMap extends Connexion {
 
     private $tileSize = 32;
 
+    public function __construct() {
+        parent::__construct();
+    }
+
     public function getMap($mapNumber) {
-        // Chemin vers les fichiers .CSV
-        $csvFile = './csv/' . 'map'. $mapNumber . '.csv';
-        $rows = $this->readCSV($csvFile);
+        $mapData = $this->getMapDataFromDB($mapNumber);
+        $rows = array_map('str_getcsv', explode("\n", $mapData));
 
         // Création de l'image
         $mapWidth = count($rows[0]);
@@ -37,15 +39,13 @@ Class ModMap {
         return $outputPath;
     }
 
-    private function readCSV($file) {
-        $rows = [];
-        if (($handle = fopen($file, "r")) !== FALSE) {
-            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                $rows[] = $data;
-            }
-            fclose($handle);
-        }
-        return $rows;
+    private function getMapDataFromDB($mapId) {
+        $sql = 'SELECT matrix FROM Map WHERE id_map = :mapId';
+        $stmt = self::$bdd->prepare($sql);
+        $stmt->bindParam(':mapId', $mapId, PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['matrix'] ?? null;
     }
 
     private function getTileImage($tileNumber) {

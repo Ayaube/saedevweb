@@ -10,7 +10,7 @@ class MesPartiesModel extends Connexion {
     public function getData($pseudo)
     {
         try {
-            $sql = 'SELECT map,vague_atteinte,ennemis_tue,argent_gagne FROM Partie NATURAL JOIN Joueur WHERE username=:pseudo';
+            $sql = 'SELECT map,vague_atteinte,ennemis_tue,argent_gagne FROM Partie NATURAL JOIN Joueur WHERE username=:pseudo ORDER BY argent_gagne DESC';
             $stmt = self::$bdd->prepare($sql);
             $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
             $stmt->execute();

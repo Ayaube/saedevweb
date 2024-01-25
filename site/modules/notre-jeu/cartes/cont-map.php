@@ -3,12 +3,13 @@
 if (!defined('MY_APP')) {
     exit('Accès non authorisé');
 }
+
 include_once 'vue-map.php';
 include_once 'mod-map.php';
 
-Class ContMap {
-    public $vue;
-    public $modele;
+class ContMap {
+    private $vue;
+    private $modele;
 
     public function __construct() {
         $this->vue = new ViewMap();
