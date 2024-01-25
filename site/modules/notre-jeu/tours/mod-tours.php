@@ -25,6 +25,29 @@ class ModTours extends Connexion {
             die('Erreur lors de la recuperation du titre : ' . $e->getMessage());
         }
     }
+
+    public function getRam($filename) {
+        try {
+            $stmt = self::$bdd->prepare('SELECT prix_ram FROM Tourelle WHERE filename=:filename');
+            $stmt->bindParam(':filename', $filename,PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e){
+            die('Erreur lors de la recuperation du titre : ' . $e->getMessage());
+        }
+    }
+    public function getFlops($filename) {
+        try {
+            $stmt = self::$bdd->prepare('SELECT prix_flops FROM Tourelle WHERE filename=:filename');
+            $stmt->bindParam(':filename', $filename,PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e){
+            die('Erreur lors de la recuperation du titre : ' . $e->getMessage());
+        }
+    }
 }
 
 ?>
