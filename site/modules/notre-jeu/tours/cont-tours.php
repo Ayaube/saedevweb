@@ -14,8 +14,9 @@ class ToursController {
             $ti = $modTours->getTitle($i.'.png');
             if (!empty($desc)) {
                 $descriptions[$i . '.png'] = $desc[0]['description'];
+            }
+            if(!empty($ti)){
                 $titre[$i . '.png'] = $ti[0]['nom_tourelle'];
-
             }
         }
 

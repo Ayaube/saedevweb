@@ -24,7 +24,7 @@ class AProposView {
                 </div>
             </a>
 
-            <a href="index.php?module=Telecharger" class="column-link">
+            <a href="jeu/Tower_Defense.zip" class="column-link">
                 <div class="column" id="block3">
                     <h2>Télécharger</h2>
                 </div>

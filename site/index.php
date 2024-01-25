@@ -48,10 +48,7 @@ if (isset($_GET['module'])) {
             $controller = new DeconnexionController();
             $controller->handle();
             break;
-
-
         case 'mes-parties':
-
             include_once "./modules/mes-parties/cont-mes-parties.php";
             $controller = new MesPartiesController();
             $controller->handle();
@@ -67,6 +64,11 @@ if (isset($_GET['module'])) {
             include_once "./modules/a-propos/cont-a-propos.php";
             $controller = new AProposController();
             $controller->handle();
+            break;
+        case 'contexte' :
+            include_once "./modules/a-propos/contexte/cont-contexte.php";
+            $controller = new ContexteController();
+            $controller -> handle();
             break;
 
         case 'notre-jeu':
@@ -98,7 +100,26 @@ if (isset($_GET['module'])) {
             $controller = new ChercherController();
             $controller->handle();
             break;
-
+        case 'equipe':
+            include_once "./modules/a-propos/equipe/cont-equipe.php";
+            $controller = new EquipeController();
+            $controller->handle();
+            break;
+        case 'horeb':
+            include_once "./modules/a-propos/equipe/horeb/cont-horeb.php";
+            $controller = new HorebController();
+            $controller->handle();
+            break;
+        case 'ayoub':
+            include_once "./modules/a-propos/equipe/ayoub/cont-ayoub.php";
+            $controller = new AyoubController();
+            $controller->handle();
+            break;
+        case 'lucas':
+            include_once "./modules/a-propos/equipe/lucas/cont-lucas.php";
+            $controller = new LucasController();
+            $controller->handle();
+            break;
 
         default:
             echo "Aucun module détecté";
@@ -106,7 +127,7 @@ if (isset($_GET['module'])) {
     }
 } else {
 
-    echo "Bienvenue sur la page d'accueil de Tower Defense";
+    include_once "accueil.php";
 }
 
 include_once "footer.php";

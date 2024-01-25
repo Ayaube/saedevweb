@@ -22,6 +22,7 @@ class ToursView {
             <button onclick="changeImage(1)">Suivant</button>
             <br>
 
+            <div id="imageTitre" class="h1 fw-bold"><?php echo $this->titre['0.png']; ?></div>
             <img src="./images/tower/0.png" id="currentImage" />
             <div id="imageDescription"><?php echo $this->descriptions['0.png']; ?></div>
         </div>
@@ -30,7 +31,7 @@ class ToursView {
             var currentImageIndex = 0;
             var imageCount = <?php echo $this->imageCount; ?>;
             var descriptions = <?php echo json_encode($this->descriptions); ?>;
-
+            var nom = <?php echo json_encode($this->titre); ?>;
             function changeImage(direction) {
                 currentImageIndex += direction;
                 if (currentImageIndex < 0) currentImageIndex = imageCount - 1;
@@ -39,6 +40,8 @@ class ToursView {
                 var imageName = currentImageIndex + '.png';
                 document.getElementById("currentImage").src = "./images/tower/" + imageName;
                 document.getElementById("imageDescription").innerHTML = descriptions[imageName];
+                document.getElementById("imageTitre").innerHTML = nom[imageName];
+
             }
         </script>
 
