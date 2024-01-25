@@ -8,7 +8,12 @@ class MesPartiesView {
     public function render($data) {
         $i = 1;
         ?>
-        <h1 class="titre-classement">Mes Parties</h1>
+        <h1 class="titre-classement fw-bold">Mes Parties</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Bonjour <?php echo $_SESSION['user']?>,
+            voici vos parties !
+        </div>
 
         <table class="table">
             <thead>
