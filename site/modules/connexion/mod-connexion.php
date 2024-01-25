@@ -13,10 +13,15 @@ class ConnexionModel extends Connexion {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['passw_hash'])) {
+            if (!isset($_SESSION['csrf_token'])) {
+                $_SESSION['csrf_token'] = generateCSRFToken();
+            }
             return true;
         }
 
         return false;
     }
+
+    
 }
 ?>

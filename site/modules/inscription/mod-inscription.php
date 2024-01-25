@@ -21,6 +21,8 @@ class InscriptionModel extends Connexion {
         $stmt->bindParam(':passw_hash', $passwordHash);
         return $stmt->execute();
     }
+
+    
 }
 
 ?>

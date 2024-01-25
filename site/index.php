@@ -17,6 +17,7 @@
 define('MY_APP', true);
 
 session_start();
+$_SESSION['csrf_token'] = generateCSRFToken();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -131,6 +132,24 @@ if (isset($_GET['module'])) {
 }
 
 include_once "footer.php";
+
+function generateCSRFToken() {
+    return bin2hex(random_bytes(32));
+}
+
+function checkCSRFToken(){
+    if(isset($_POST['csrf_token'])) {
+        $user_token = $_POST['csrf_token'];
+        if($user_token === $_SESSION['csrf_token']) {
+            return;
+        } else {
+            echo "Erreur : Jeton CSRF non valide.";
+        }
+        unset($_SESSION['csrf_token']);
+    } else {
+        echo "Erreur : Jeton CSRF manquant dans la requête.";
+    }
+}
 ?>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
