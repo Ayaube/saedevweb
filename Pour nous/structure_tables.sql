@@ -15,7 +15,8 @@ CREATE TABLE Ennemis(
                         pv              INT NOT NULL,
                         vitesse         INT NOT NULL,
                         gain            INT NOT NULL,
-                        description     TEXT NOT NULL
+                        description     TEXT NOT NULL,
+                        filename        VARCHAR(25)
 );
 
 
@@ -33,7 +34,8 @@ CREATE TABLE Tourelle(
                         nom_tourelle    VARCHAR(255) NOT NULL,
                         date_creation   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                         prix_ram        INT NOT NULL,
-                        prix_flops      INT NOT NULL
+                        prix_flops      INT NOT NULL,
+                        filename        VARCHAR(25)
 );
 
 
