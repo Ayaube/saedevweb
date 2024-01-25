@@ -14,15 +14,15 @@ class ModEnnemis extends Connexion {
         }
     }
 
-    public function countNBennemis() {
+    public function getNom($filename) {
         try {
-            $stmt = self::$bdd->prepare('SELECT count(*) FROM Ennemis');
+            $stmt = self::$bdd->prepare('SELECT nom_ennemi FROM Ennemis WHERE filename=:filename');
+            $stmt->bindParam(':filename', $filename,PDO::PARAM_STR);
             $stmt->execute();
-            $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $stmt;
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         catch (PDOException $e){
-            die('Erreur lors de la recuperation du nombre des ennemis : ' . $e->getMessage());
+            die('Erreur lors de la recuperation du nom : ' . $e->getMessage());
         }
     }
 }
