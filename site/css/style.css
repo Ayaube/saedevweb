@@ -2,7 +2,32 @@
     text-align: center;
     margin: 20px 0;
 }
-
+.test{
+    display: inline-block;
+    float: left;
+}
+.hero {
+    height: 80vh;
+    background-color : black;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+}
+.heros {
+    height: 80vh;
+    background-color : #162739;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+}
 
 .search-bar input[type="text"] {
     width: 300px;

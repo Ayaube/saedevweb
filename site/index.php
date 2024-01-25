@@ -68,6 +68,11 @@ if (isset($_GET['module'])) {
             $controller = new AProposController();
             $controller->handle();
             break;
+        case 'contexte' :
+            include_once "./modules/a-propos/contexte/cont-contexte.php";
+            $controller = new ContexteController();
+            $controller -> handle();
+            break;
 
         case 'notre-jeu':
             include_once "./modules/notre-jeu/cont-notre-jeu.php";
@@ -106,7 +111,7 @@ if (isset($_GET['module'])) {
     }
 } else {
 
-    echo "Bienvenue sur la page d'accueil de Tower Defense";
+    include_once "accueil.php";
 }
 
 include_once "footer.php";
