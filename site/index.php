@@ -36,7 +36,7 @@ if (isset($_GET['module'])) {
 
         case 'connexion':
             include_once "modules/connexion/cont-connexion.php";
-            $controller = new ControleurConnexion();
+            $controller = new ConnexionController();
             $controller->handle();
             break;
 
