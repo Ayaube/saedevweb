@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Inclusion du fichier de config reseau
+
 
 include_once "header.php";
 
@@ -28,16 +28,16 @@ if (isset($_GET['module'])) {
     $module = $_GET['module'];
 
     switch ($module) {
-        case 'register':
-            include_once "modules/register/cont_register.php";
-            $controller = new ControleurRegister();
+        case 'inscription':
+            include_once "modules/inscription/cont-inscription.php";
+            $controller = new InscriptionController();
             $controller->handle();
             break;
 
-        case 'login':
-            include_once "modules/login/cont_login.php";
-            $controller = new ControleurLogin();
-            $controller->__construct();
+        case 'connexion':
+            include_once "modules/connexion/cont-connexion.php";
+            $controller = new ControleurConnexion();
+            $controller->handle();
             break;
 
         case 'mes-parties':

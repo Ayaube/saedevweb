@@ -37,7 +37,7 @@
             <!-- Bouton de connexion -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-custom" href="index.php?module=login">Connexion</a>
+                    <a class="btn btn-custom" href="index.php?module=inscription">Connexion</a>
                 </li>
             </ul>
         </div>
