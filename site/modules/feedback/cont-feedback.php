@@ -27,7 +27,7 @@ class ContFeedback {
                     $result = $this->modele->saveFeedback($username, $commentaire);
                     $this->vue->afficherResultat($result);
                 } else {
-                    // Afficher le formulaire de feedback
+
                     $this->vue->afficherForm();
                 }
             }
@@ -36,7 +36,7 @@ class ContFeedback {
                 $this->vue->afficherFeedback($data);
             }
         } else {
-            // L'utilisateur n'est pas connecté, invitez-le à se connecter
+
             $this->vue->demanderConnexion();
         }
     }

@@ -10,7 +10,7 @@ class ToursController {
         $ram = [];
         $flops = [] ;
 
-        // Exemple : récupérer la description pour chaque ennemi
+
         for ($i = 0; $i < 6; $i++) {
             $desc = $modTours->getDesc($i . '.png');
             $ti = $modTours->getTitle($i.'.png');

@@ -5,6 +5,7 @@ if (!defined('MY_APP')) {
 }
 
 class ChercherView {
+
     public function render($data = null) {
         include_once "header.php";
         ?>
@@ -21,9 +22,10 @@ class ChercherView {
             </form>
         </div>
 
+
         <?php
         if (!empty($data)) {
-            // Vérifier si le résultat est un tableau de tableaux (plusieurs parties)
+
             if (array_keys($data) !== range(0, count($data) - 1)) {
                 $data = [$data];
             }
@@ -58,7 +60,7 @@ class ChercherView {
                 echo '</table>';
             }
         } else {
-            // Aucune recherche effectuée ou aucun pseudo spécifié
+            // Aucune recherche effectuée ou aucun pseudo spécifié ou joueur sans partie
             echo "<p class='no-results-message'>Aucun résultat trouvé pour le pseudo spécifié.</p>";
         }
 

@@ -17,7 +17,7 @@ class InscriptionModel extends Connexion {
     }
 
     public function registerUser($username, $email, $passwordHash) {
-<<<<<<< HEAD
+
 
         if ($this->checkCSRFToken()){
             $stmt = self::$bdd->prepare("INSERT INTO Joueur (username, email, passw_hash,role) VALUES (:username, :email, :passw_hash,'user')");
@@ -27,16 +27,13 @@ class InscriptionModel extends Connexion {
             return $stmt->execute();
         }
 
-    }
-
-=======
         $stmt = self::$bdd->prepare("INSERT INTO Joueur (username, email, passw_hash,role) VALUES (:username, :email, :passw_hash,'user')");
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':passw_hash', $passwordHash);
         return $stmt->execute();
     }
->>>>>>> origin/horeb
+
 }
 
 ?>
