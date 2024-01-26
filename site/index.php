@@ -131,6 +131,11 @@ if (isset($_GET['module'])) {
             $controller = new ContFeedback();
             $controller->handle();
             break;
+        case 'ami':
+            include_once "./modules/ami/cont-ami.php";
+            $controller = new AmiController();
+            $controller->handle();
+            break;
 
         default:
             echo "Aucun module détecté";
