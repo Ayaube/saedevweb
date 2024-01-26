@@ -1,16 +1,566 @@
+body{
+    font-family: 'Blutter Slim', sans-serif !important;
+    font-size: 12px;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+.test{
+    display: inline-block;
+    float: left;
+}
+.hero {
+    height: 80vh;
+    background-color : black;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+}
+.heros {
+    height: 80vh;
+    background-color : #162739;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+    display: block; /* Afficher l'élément input comme un bloc (sur une ligne différente) */
+}
+
+.search-bar button {
+    height: 50px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-left: 12px;
+    background-color: #162739; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block; /* Afficher l'élément button comme un bloc (sur une ligne différente) */
+}
+
+.search-bar button:hover {
+    background-color: #AC8651; /* Couleur au survol du bouton */
+}
+
+.no-results-message {
+    color: #AC8651;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.table {
+    margin-top: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.titre-classement {
+    text-align: center;
+    color: #162739;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #BFCBCB;
+    color: black;
+}
+
+.table-success {
+    background-color: #AC8651 !important;
+    color: white !important;
+}
+
+
+
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    background-color: violet;
 }
 
 .list{
     display: flex;
-    background-color: blue;
 }
 
-.footer {
-    background-color: crimson;
+
+.espace-haut {
+    height: 500px;
+}
+
+
+.espace-bas {
+    height: 130px;
+}
+
+/* Partie concernant l'affichage des map, Ayoub*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carte-btn {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.carte-btn:hover {
+    background-color: #AC8651;
+}
+
+#map-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Partie concernant l'affichage des enne, Ayoub*/
+
+#enemyContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+#currentImage {
+    width: 100px; /* Ajustez selon vos besoins */
+    height: auto;
+}
+
+#imageDescription {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+#imageTitre {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    background-color: #162739;
+    border: 0px solid black;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #AC8651;
+}
+
+
+
+
+
+.content-block {
+    background-color: #162739;
+    color: #BFCBCB;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 10px auto;
+    max-width: 1600px;
+    min-width: 1000px;
+}
+
+.content-block h2 {
+    color: #BFCBCB;
+}
+
+.content-block p {
+    color: #BFCBCB;
+}
+
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom {
+    background-color: #162739 !important;
+}
+
+.navbar-nav .mes-parties-link {
+    margin-right: 13px;
+}
+
+
+.navbar-custom .nav-link {
+    color: #BFCBCB;
+}
+
+.navbar-custom .navbar-toggler {
+    background-color: #D1EBF2;
+}
+
+.navbar-custom {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+
+.btn-custom {
+    color: #AC8651;
+    border-color: #AC8651;
+}
+.btn-custom:hover {
+    color: #BFCBCB;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #AC8651;
+}
+
+.navbar-custom .nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -1px;
+    left: 50%;
+    background-color: #AC8651;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #D1EBF2;
+}
+
+main {
+    flex: 1;
+}
+
+.content-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#a-propos.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+#a-propos .column-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+#a-propos .column {
+    background-color: #162739;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s ease;
+    flex-grow: 1;
+}
+
+#a-propos .column h2 {
+    color: #BFCBCB;
+    margin: 0;
+}
+
+#a-propos .column-link:hover .column {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+#a-propos .column-link:hover .column h2 {
+    color: #AC8651;
+}
+
+
+
+
+
+
+
+
+
+#notre-jeu.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+#notre-jeu .column-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+#notre-jeu .column {
+    background-color: #162739;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s ease;
+    flex-grow: 1;
+}
+
+#notre-jeu .column h2 {
+    color: #BFCBCB;
+    margin: 0;
+}
+
+#notre-jeu .column-link:hover .column {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+#notre-jeu .column-link:hover .column h2 {
+    color: #AC8651;
+}
+
+
+
+.footer{
+    background-color: #AC8651;
+    flex-shrink: 0;
+}
+
+
+/* Styliser le conteneur du formulaire */
+.form-container {
+    max-width: 500px; /* Largeur maximale du formulaire */
+    margin: auto; /* Centrer le formulaire */
+    padding: 20px; /* Ajouter du padding autour du formulaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+    margin-bottom: 40px;
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #162739;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #AC8651;
+}
+
+
+/* Style pour la carte de connexion */
+.card {
+    margin-bottom: 210px; /* Espace en dessous de la carte */
+    margin-top: 100px
+}
+
+/* Titre de la carte de connexion */
+.card-header h4 {
+    text-align: center; /* Centrer le titre de la carte */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    margin-top: 15px;
+}
+
+/* Style pour le bouton de connexion */
+.btn-primary {
+    width: 100%; /* Le bouton prend toute la largeur */
+    background-color: #162739; /* Couleur de fond */
+    border-color: #162739; /* Couleur de la bordure */
+}
+
+.btn-primary:hover {
+    background-color: #AC8651; /* Couleur de fond au survol */
+    border-color: #AC8651; /* Couleur de la bordure au survol */
+}
+
+/* Style pour le bouton d'inscription */
+.btn-secondary {
+    width: 100%; /* Le bouton prend toute la largeur */
+    background-color: #6c757d; /* Couleur de fond */
+    border-color: #6c757d; /* Couleur de la bordure */
+}
+
+.btn-secondary:hover {
+    background-color: #162739; /* Couleur de fond au survol */
+    border-color: #162739; /* Couleur de la bordure au survol */
+}
+
+
+
+/* Styles pour le formulaire de feedback */
+.feedback-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h2 {
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+.feedback-form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.feedback-form-textarea {
+    min-height: 150px; /* Vous pouvez ajuster la hauteur selon vos besoins */
+}
+
+.feedback-submit-btn {
+    background-color:  #162739;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.feedback-submit-btn:hover {
+    background-color: #AC8651;
+}
+
+/* Styles pour les messages d'alerte */
+.feedback-alert {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.feedback-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.feedback-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.feedback-alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* Styles pour le lien de connexion */
+.feedback-connect-link {
+    color:  #162739;
+    text-decoration: none;
+}
+
+.feedback-connect-link:hover {
+    text-decoration: underline;
 }
