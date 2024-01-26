@@ -483,3 +483,79 @@ main {
     background-color: #162739; /* Couleur de fond au survol */
     border-color: #162739; /* Couleur de la bordure au survol */
 }
+
+
+
+/* Styles pour le formulaire de feedback */
+.feedback-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h2 {
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+.feedback-form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.feedback-form-textarea {
+    min-height: 150px; /* Vous pouvez ajuster la hauteur selon vos besoins */
+}
+
+.feedback-submit-btn {
+    background-color:  #162739;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.feedback-submit-btn:hover {
+    background-color: #AC8651;
+}
+
+/* Styles pour les messages d'alerte */
+.feedback-alert {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.feedback-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.feedback-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.feedback-alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* Styles pour le lien de connexion */
+.feedback-connect-link {
+    color:  #162739;
+    text-decoration: none;
+}
+
+.feedback-connect-link:hover {
+    text-decoration: underline;
+}
