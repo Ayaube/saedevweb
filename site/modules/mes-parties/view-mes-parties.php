@@ -60,6 +60,12 @@ class MesPartiesView {
         else {
             echo 'Role non défini ou user non connecté';
         }
+
+        if (isset($_SESSION['user'])){
+            ?>
+                <a href="index.php?module=changer-mdp">Changer votre mot de passe</a>
+            <?php
+        }
     }
 }
 

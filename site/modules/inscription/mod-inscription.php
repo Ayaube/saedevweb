@@ -4,11 +4,13 @@ if (!defined('MY_APP')) {
 }
 require_once './modules/connexionBD/connxionBD.php';
 
-class InscriptionModel extends Connexion {
+class InscriptionModel extends Connexion
+{
 
-    public function checkUsernameExists($username) {
+    public function checkUsernameExists($username)
+    {
         // Utilisez $this->bdd qui est hérité de la classe Connexion
-        if ($this->checkCSRFToken()){
+        if ($this->checkCSRFToken()) {
             $stmt = self::$bdd->prepare('SELECT id_joueur FROM Joueur WHERE username = :username');
             $stmt->bindParam(':username', $username);
             $stmt->execute();
@@ -16,10 +18,10 @@ class InscriptionModel extends Connexion {
         }
     }
 
-    public function registerUser($username, $email, $passwordHash) {
-<<<<<<< HEAD
+    public function registerUser($username, $email, $passwordHash)
+    {
 
-        if ($this->checkCSRFToken()){
+        if ($this->checkCSRFToken()) {
             $stmt = self::$bdd->prepare("INSERT INTO Joueur (username, email, passw_hash,role) VALUES (:username, :email, :passw_hash,'user')");
             $stmt->bindParam(':username', $username);
             $stmt->bindParam(':email', $email);
@@ -28,15 +30,6 @@ class InscriptionModel extends Connexion {
         }
 
     }
-
-=======
-        $stmt = self::$bdd->prepare("INSERT INTO Joueur (username, email, passw_hash,role) VALUES (:username, :email, :passw_hash,'user')");
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':passw_hash', $passwordHash);
-        return $stmt->execute();
-    }
->>>>>>> origin/horeb
 }
 
 ?>

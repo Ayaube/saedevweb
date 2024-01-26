@@ -136,6 +136,11 @@ if (isset($_GET['module'])) {
             $controller = new ContFeedback();
             $controller->handle();
             break;
+        case 'changer-mdp':
+            include_once "./modules/changer-mdp/cont-changer-mdp.php";
+            $controller = new ContChangerMdp();
+            $controller->handle();
+            break;
 
         default:
             echo "Aucun module détecté";
