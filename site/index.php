@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/tower.png" type="image/x-icon">
     <link rel="shortcut icon" href="./images/tower.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/blutter-slim" rel="stylesheet">
+
 
 </head>
 <body>
@@ -17,6 +19,9 @@
 define('MY_APP', true);
 
 session_start();
+if(!isset($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = generateCSRFToken();
+}
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -142,6 +147,12 @@ if (isset($_GET['module'])) {
 }
 
 include_once "footer.php";
+
+function generateCSRFToken() {
+    return bin2hex(random_bytes(32));
+}
+
+
 ?>
 
 <script src="./js/bootstrap.bundle.min.js"></script>

@@ -36,6 +36,9 @@ class ConnexionView {
                                 <div class="mb-3">
                                     <a href="index.php?module=inscription" class="btn btn-secondary">S'inscrire</a>
                                 </div>
+                                <?php
+                                   echo "<input type=\"hidden\" name=\"csrf_token\" value=\"" . $_SESSION['csrf_token'] . "\">";
+                                ?>
                             </form>
                         </div>
                     </div>
