@@ -1,21 +1,21 @@
-INSERT INTO Joueur VALUES (DEFAULT,'Lenulos93220','aa@93220.fr','aaa',DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT,'LaBouse93130','oo@93130.fr','zzz',DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT,'LeBG95470','bb@95470.fr','bbb',DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'MarioBros', 'mario@nintendo.com', 'mario123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'LinkZelda', 'link@hyrule.com', 'zelda123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'MasterChief', 'chief@halo.com', 'halo123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'LaraCroft', 'lara@tombraider.com', 'tomb123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'SamusAran', 'samus@metroid.com', 'metroid123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'GordonFreeman', 'gordon@half-life.com', 'hl123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'GeraltRivia', 'geralt@witcher.com', 'witcher123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'JillValentine', 'jill@residentevil.com', 'resident123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'SolidSnake', 'snake@metalgear.com', 'metal123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'KratosGodWar', 'kratos@godofwar.com', 'godwar123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'NathanDrake', 'nathan@uncharted.com', 'uncharted123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'Dovahkiin', 'dragonborn@skyrim.com', 'skyrim123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'ArthurMorgan', 'arthur@reddead.com', 'reddead123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'CloudStrife', 'cloud@finalfantasy.com', 'ff123', DEFAULT);
-INSERT INTO Joueur VALUES (DEFAULT, 'SonicHedgehog', 'sonic@sega.com', 'fast123', DEFAULT);
+INSERT INTO Joueur VALUES (DEFAULT,'Lenulos93220','aa@93220.fr','aaa',DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT,'LaBouse93130','oo@93130.fr','zzz',DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT,'LeBG95470','bb@95470.fr','bbb',DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'MarioBros', 'mario@nintendo.com', 'mario123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'LinkZelda', 'link@hyrule.com', 'zelda123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'MasterChief', 'chief@halo.com', 'halo123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'LaraCroft', 'lara@tombraider.com', 'tomb123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'SamusAran', 'samus@metroid.com', 'metroid123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'GordonFreeman', 'gordon@half-life.com', 'hl123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'GeraltRivia', 'geralt@witcher.com', 'witcher123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'JillValentine', 'jill@residentevil.com', 'resident123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'SolidSnake', 'snake@metalgear.com', 'metal123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'KratosGodWar', 'kratos@godofwar.com', 'godwar123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'NathanDrake', 'nathan@uncharted.com', 'uncharted123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'Dovahkiin', 'dragonborn@skyrim.com', 'skyrim123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'ArthurMorgan', 'arthur@reddead.com', 'reddead123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'CloudStrife', 'cloud@finalfantasy.com', 'ff123', DEFAULT,'user');
+INSERT INTO Joueur VALUES (DEFAULT, 'SonicHedgehog', 'sonic@sega.com', 'fast123', DEFAULT,'user');
 
 
 
@@ -175,11 +175,3 @@ INSERT INTO Partie VALUES (DEFAULT, 10, 4, 27, 102, 10200);
 INSERT INTO Partie VALUES (DEFAULT, 11, 5, 29, 107, 10700);
 INSERT INTO Partie VALUES (DEFAULT, 12, 1, 31, 112, 11200);
 
-
-
-INSERT INTO Detient VALUES (1,2);
-INSERT INTO Detient VALUES (1,5);
-INSERT INTO Detient VALUES (2,3);
-INSERT INTO Detient VALUES (3,1);
-INSERT INTO Detient VALUES (3,4);
-INSERT INTO Detient VALUES (2,6);
