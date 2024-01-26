@@ -120,6 +120,11 @@ if (isset($_GET['module'])) {
             $controller = new LucasController();
             $controller->handle();
             break;
+        case 'delete':
+            include_once "./modules/delete/cont-delete.php";
+            $controller = new DeleteController();
+            $controller->handle();
+            break;
 
         default:
             echo "Aucun module détecté";
