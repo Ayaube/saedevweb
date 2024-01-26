@@ -67,9 +67,9 @@ if (isset($_GET['module'])) {
             $controller = new DeconnexionController();
             $controller->handle();
             break;
-        case 'mes-parties':
-            include_once "./modules/mes-parties/cont-mes-parties.php";
-            $controller = new MesPartiesController();
+        case 'profil':
+            include_once "./modules/profil/cont-profil.php";
+            $controller = new ProfilController();
             $controller->handle();
             break;
 

@@ -6,7 +6,7 @@ if (!defined('MY_APP')) {
 
 require_once './modules/connexionBD/connxionBD.php';
 
-class MesPartiesModel extends Connexion {
+class ProfilModel extends Connexion {
     public function getData($pseudo)
     {
         try {

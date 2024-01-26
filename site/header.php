@@ -32,7 +32,7 @@
 
             if (isset($_SESSION['user'])) {
                 // Afficher "Mes Parties" et "Déconnexion" si l'utilisateur est connecté
-                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link mes-parties-link" href="index.php?module=mes-parties">Profil</a></li></ul>';
+                echo '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link profil-link" href="index.php?module=profil">Profil</a></li></ul>';
                 echo '<ul class="navbar-nav"><li class="nav-item"><a class="btn btn-custom" href="index.php?module=deconnexion">Deconnexion</a></li></ul>';
             }
             else {

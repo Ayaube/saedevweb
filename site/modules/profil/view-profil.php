@@ -4,7 +4,7 @@ if (!defined('MY_APP')) {
     exit('Accès non autorisé');
 }
 
-class MesPartiesView {
+class ProfilView {
     public function render($data) {
         include_once "header.php";
         $i = 1;
