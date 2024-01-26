@@ -11,7 +11,6 @@ class EnnemisController {
         $vitesse = [];
         $gain =[];
 
-        // Exemple : récupérer la description pour chaque ennemi
         for ($i = 0; $i < 6; $i++) {
             $desc = $modEnnemis->getDesc($i . '.png');
             $nom = $modEnnemis->getNom($i . '.png');

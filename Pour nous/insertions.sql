@@ -1,3 +1,4 @@
+
 INSERT INTO Joueur VALUES (DEFAULT,'Lenulos93220','aa@93220.fr','aaa',DEFAULT,'user');
 INSERT INTO Joueur VALUES (DEFAULT,'LaBouse93130','oo@93130.fr','zzz',DEFAULT,'user');
 INSERT INTO Joueur VALUES (DEFAULT,'LeBG95470','bb@95470.fr','bbb',DEFAULT,'user');

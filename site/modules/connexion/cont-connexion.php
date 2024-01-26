@@ -24,6 +24,10 @@ class ConnexionController {
             }
 
             if ($model->checkCredentials($username, $password)) {
+
+                // régénérer l'ID de session pour eviter les attaques de fixation d'ID
+                session_regenerate_id(true);
+
                 $_SESSION['user'] = $username;
                 $_SESSION['role'] = $model->getRole($username);
 

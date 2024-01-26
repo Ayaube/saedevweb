@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS Joueur;
+DROP TABLE IF EXISTS Ennemis;
+DROP TABLE IF EXISTS Map;
+DROP TABLE IF EXISTS Partie;
+
 -- Table: Joueur
 CREATE TABLE Joueur(
                     id_joueur     INT AUTO_INCREMENT PRIMARY KEY,
@@ -50,5 +55,23 @@ CREATE TABLE Partie(
                     argent_gagne   INT NOT NULL,
                     FOREIGN KEY (id_joueur) REFERENCES Joueur(id_joueur),
                     FOREIGN KEY (map) REFERENCES Map(id_map)
+);
+
+-- Table: Detient
+CREATE TABLE Detient(
+                        id_joueur   INT NOT NULL,
+                        id_tourelle INT NOT NULL,
+                        PRIMARY KEY (id_joueur, id_tourelle),
+                        FOREIGN KEY (id_joueur) REFERENCES Joueur(id_joueur),
+                        FOREIGN KEY (id_tourelle) REFERENCES Tourelle(id_tourelle)
+);
+
+
+CREATE TABLE Feedback(
+                         id_feedback      INT AUTO_INCREMENT PRIMARY KEY,
+                         id_joueur        INT NOT NULL,
+                         date_feedback    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                         commentaire      TEXT NOT NULL,
+                         FOREIGN KEY (id_joueur) REFERENCES Joueur(id_joueur)
 );
 

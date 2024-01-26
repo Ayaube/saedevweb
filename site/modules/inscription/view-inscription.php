@@ -43,6 +43,9 @@ public function render() {
                             <label for="confirm_password" class="form-label">Confirmez le mot de passe</label>
                             <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
                         </div>
+                        <?php
+                        echo "<input type=\"hidden\" name=\"csrf_token\" value=\"" . $_SESSION['csrf_token'] . "\">";
+                        ?>
                         <button type="submit" class="btn btn-primary">S'inscrire</button>
                     </form>
                 </div>

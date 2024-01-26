@@ -6,6 +6,8 @@ require_once './modules/connexionBD/connxionBD.php';
 
 class ConnexionModel extends Connexion {
 
+
+
     public function checkCredentials($username, $password) {
         $stmt = self::$bdd->prepare('SELECT username, passw_hash FROM Joueur WHERE username = :username');
         $stmt->bindParam(':username', $username);
@@ -13,7 +15,9 @@ class ConnexionModel extends Connexion {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['passw_hash'])) {
-            return true;
+            if ($this->checkCSRFToken()){
+                return true;
+            }
         }
 
         return false;
