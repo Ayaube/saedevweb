@@ -38,6 +38,12 @@ class ConnexionModel extends Connexion {
         return false;
     }
 
-    
+    public function getRole($name) {
+            $stmt = self::$bdd->prepare("SELECT role FROM Joueur WHERE username=:name");
+            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result ? $result['role'] : null;
+    }
 }
 ?>
