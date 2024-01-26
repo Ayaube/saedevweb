@@ -50,7 +50,11 @@ class MesPartiesView {
             Bonjour <?php echo $_SESSION['user'] ;?>,
             voici vos fonctions d'administrateur !
         </div>
-            <button type="button" class="btn btn-danger" onclick="window.location.href='index.php?module=delete';"">Supprimer un joueur</button>
+            <div class="text-center">
+                <button type="button" class="btn btn-info" onclick="window.location.href='index.php?module=feedback';"">Voir les feedback des joueurs</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href='index.php?module=delete';"">Supprimer un joueur</button>
+            </div>
+
         <?php
         }
         else {

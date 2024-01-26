@@ -19,14 +19,21 @@ class ContFeedback {
     public function handle() {
         // Vérifiez si l'utilisateur est connecté avant de soumettre un feedback
         if (isset($_SESSION['user'])) {
-            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['commentaire'])) {
-                $username = $_SESSION['user'];
-                $commentaire = $_POST['commentaire'];
-                $result = $this->modele->saveFeedback($username, $commentaire);
-                $this->vue->afficherResultat($result);
-            } else {
-                // Afficher le formulaire de feedback
-                $this->vue->afficherForm();
+            $_SESSION['role'] = $this->modele->getRole($_SESSION['user']);
+            if ($_SESSION['role'] == 'user') {
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['commentaire'])) {
+                    $username = $_SESSION['user'];
+                    $commentaire = $_POST['commentaire'];
+                    $result = $this->modele->saveFeedback($username, $commentaire);
+                    $this->vue->afficherResultat($result);
+                } else {
+                    // Afficher le formulaire de feedback
+                    $this->vue->afficherForm();
+                }
+            }
+            else {
+                $data = $this->modele->getFeedback();
+                $this->vue->afficherFeedback($data);
             }
         } else {
             // L'utilisateur n'est pas connecté, invitez-le à se connecter

@@ -22,6 +22,25 @@ class ModFeedback extends Connexion {
             return false;
         }
     }
+
+    public function getFeedback (){
+        try{
+            $stmt = self::$bdd->prepare('SELECT username,commentaire,date_feedback FROM Feedback NATURAL JOIN Joueur');
+            $stmt -> execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e){
+            die('Erreur lors de la recuperation des feedbacks : ' . $e->getMessage());
+        }
+    }
+
+    public function getRole($name) {
+        $stmt = self::$bdd->prepare("SELECT role FROM Joueur WHERE username=:name");
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result ? $result['role'] : null;
+    }
 }
 
 

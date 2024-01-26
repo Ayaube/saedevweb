@@ -56,6 +56,7 @@ CREATE TABLE Partie(
                     FOREIGN KEY (id_joueur) REFERENCES Joueur(id_joueur),
                     FOREIGN KEY (map) REFERENCES Map(id_map)
 );
+
 -- Table: Detient
 CREATE TABLE Detient(
                         id_joueur   INT NOT NULL,
@@ -73,3 +74,4 @@ CREATE TABLE Feedback(
                          commentaire      TEXT NOT NULL,
                          FOREIGN KEY (id_joueur) REFERENCES Joueur(id_joueur)
 );
+

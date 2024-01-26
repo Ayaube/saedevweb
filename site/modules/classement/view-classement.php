@@ -7,7 +7,7 @@ class ClassementView {
     public function render($data) {
         $i = 1;
 ?>
-        <h1 class="titre-classement">Classement</h1>
+        <h1 class="titre-classement fw-bold">Classement</h1>
 
     <table class="table">
         <thead>

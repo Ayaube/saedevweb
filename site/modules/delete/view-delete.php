@@ -30,7 +30,7 @@ class DeleteView {
             </thead>
             <tbody>
             <?php foreach ($data as $row): ?>
-                <tr class="<?php echo ($i === 1) ? 'table-success' : ''; ?>">
+                <tr>
                     <th scope="row"><?php echo $i++; ?></th>
                     <td><?php echo htmlspecialchars($row['username'], ENT_QUOTES, 'UTF-8'); ?></td>
                     <td><?php echo htmlspecialchars($row['email'], ENT_QUOTES, 'UTF-8'); ?></td>
