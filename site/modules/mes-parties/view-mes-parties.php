@@ -10,7 +10,7 @@ class MesPartiesView {
         $i = 1;
 
         ?>
-        <h1 class="titre-classement fw-bold">Mes Parties</h1>
+        <h1 class="titre-classement fw-bold">Profil</h1>
 
         <?php
         if (isset($_SESSION['role'])&&$_SESSION['role'] != 'admin') {
