@@ -21,27 +21,6 @@ class InscriptionModel extends Connexion {
         $stmt->bindParam(':passw_hash', $passwordHash);
         return $stmt->execute();
     }
-
-    public function deleteUser (){
-        if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
-            exit('Accès refusé.');
-        }
-
-        if (isset($_POST['delete_user'])) {
-            $user_id_to_delete = $_POST['user_id'];
-
-            // Suppression de l'utilisateur
-            $stmt = self::$bdd->prepare("DELETE FROM users WHERE user_id = :user_id");
-            $stmt->bindParam(':user_id', $user_id_to_delete, PDO::PARAM_INT);
-            $success = $stmt->execute();
-
-            if ($success) {
-                echo "L'utilisateur a été supprimé.";
-            } else {
-                echo "Erreur lors de la suppression de l'utilisateur.";
-            }
-        }
-    }
 }
 
 ?>
