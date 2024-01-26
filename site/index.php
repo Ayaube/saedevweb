@@ -18,10 +18,23 @@
 
 define('MY_APP', true);
 
+// Force l'utilisation des cookies uniquement pour les ID de session, Active HttpOnly
+ini_set('session.cookie_httponly', 1);
+ini_set('session.cookie_secure', 1);
+ini_set('session.use_only_cookies', 1);
+
 session_start();
 if(!isset($_SESSION['csrf_token'])){
     $_SESSION['csrf_token'] = generateCSRFToken();
 }
+
+
+// Detruit la session après 1min d'inactivité
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 3600)) {
+    session_unset();
+    session_destroy();
+}
+$_SESSION['LAST_ACTIVITY'] = time();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
