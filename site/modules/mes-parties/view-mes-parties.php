@@ -17,7 +17,7 @@ class MesPartiesView {
         ?>
         <div class="alert alert-primary" role="alert">
             Bonjour <?php echo $_SESSION['user'] ;?>,
-            voici vos parties !
+            voici votre profil ! <a href="index.php?module=changer-mdp">Changer votre mot de passe</a>
         </div>
 
         <table class="table">
@@ -48,7 +48,7 @@ class MesPartiesView {
             ?>
             <div class="alert alert-primary" role="alert">
             Bonjour <?php echo $_SESSION['user'] ;?>,
-            voici vos fonctions d'administrateur !
+            voici vos fonctions d'administrateur ! <a href="index.php?module=changer-mdp">Changer votre mot de passe</a>
         </div>
             <div class="text-center">
                 <button type="button" class="btn btn-info" onclick="window.location.href='index.php?module=feedback';"">Voir les feedback des joueurs</button>
@@ -63,7 +63,7 @@ class MesPartiesView {
 
         if (isset($_SESSION['user'])){
             ?>
-                <a href="index.php?module=changer-mdp">Changer votre mot de passe</a>
+
             <?php
         }
     }
