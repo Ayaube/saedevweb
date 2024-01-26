@@ -126,6 +126,12 @@ if (isset($_GET['module'])) {
             $controller->handle();
             break;
 
+        case 'feedback':
+            include_once "./modules/feedback/cont-feedback.php";
+            $controller = new ContFeedback();
+            $controller->handle();
+            break;
+
         default:
             echo "Aucun module détecté";
             break;
