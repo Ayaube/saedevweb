@@ -1,3 +1,8 @@
+body{
+    font-family: 'Blutter Slim', sans-serif !important;
+    font-size: 12px;
+}
+
 .search-bar {
     text-align: center;
     margin: 20px 0;

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/tower.png" type="image/x-icon">
     <link rel="shortcut icon" href="./images/tower.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/blutter-slim" rel="stylesheet">
+
 
 </head>
 <body>
